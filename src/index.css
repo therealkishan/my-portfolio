@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syncopate:wght@400;700&display=swap');
+
+:root {
+  /* Midnight Tech Theme */
+  --bg-color: #0F172A;
+  /* Deep Navy */
+  /* Subtle vertical gradient */
+  --bg-image: linear-gradient(to bottom, #0F172A, #020617);
+
+  --text-color: #F1F5F9;
+  /* Ghost White */
+  --text-secondary: #94A3B8;
+  /* Cool Grey */
+
+  /* Electric Sky Blue */
+  --accent-color: #38BDF8;
+  --accent-secondary: #0EA5E9;
+  /* Slightly darker blue for gradients */
+
+  /* Card Background (Lighter Navy) */
+  --card-bg: #1E293B;
+
+  /* Remove glass border, relying on shadow */
+  --glass-bg: var(--card-bg);
+  --glass-border: transparent;
+
+  /* Tag/Pill Colors - Blue Tint */
+  --tag-bg: rgba(56, 189, 248, 0.1);
+  --tag-text: #38BDF8;
+  --tag-border: rgba(56, 189, 248, 0.2);
+}
+
+[data-theme='light'] {
+  --bg-color: #ffffff;
+  --bg-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  --text-color: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --accent-color: #007bff;
+  --accent-secondary: #6610f2;
+  --glass-bg: #f8f9fa;
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --card-bg: #f8f9fa;
+
+  /* Tag/Pill Colors */
+  --tag-bg: rgba(0, 123, 255, 0.1);
+  --tag-text: #0056b3;
+  --tag-border: rgba(0, 123, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  /* Midnight Tech Grid: Gradient + Grid Lines */
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    var(--bg-image);
+  background-size: 50px 50px, 50px 50px, cover;
+  background-attachment: fixed;
+
+  color: var(--text-color);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--accent-color), var(--accent-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  /* Solid lighter navy */
+  /* Soft Shadow for depth instead of border */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  /* Very subtle border */
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.section {
+  padding: 4rem 0;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
