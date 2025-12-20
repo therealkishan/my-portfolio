@@ -49,7 +49,7 @@ const Education = () => {
                     <span className="gradient-text">Education & Highlights</span>
                 </h2>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
 
                     {/* Education Box */}
                     <motion.div

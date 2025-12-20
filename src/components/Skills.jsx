@@ -43,7 +43,7 @@ const Skills = () => {
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Technologies and tools I work with</p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                     {skillCategories.map((category, index) => (
                         <motion.div
                             key={index}

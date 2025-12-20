@@ -107,6 +107,7 @@ const Hero = () => {
                         }}></div>
 
                         <motion.div
+                            className="profile-container"
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
@@ -156,7 +157,7 @@ const Hero = () => {
                     }
                     h1 { font-size: 3rem !important; }
                     /* Make profile image smaller on mobile */
-                    .container > div:last-child > div > div {
+                    .profile-container {
                         width: 280px !important;
                         height: 280px !important;
                     }
