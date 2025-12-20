@@ -111,7 +111,7 @@ const Contact = () => {
                     <form onSubmit={handleSubmit} className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                         <h3 style={{ marginBottom: '1rem', color: 'var(--accent-color)' }}>Send a Message</h3>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                        <div className="name-mobile-grid">
                             <input
                                 type="text" name="name" placeholder="Name" required
                                 onChange={handleChange}
@@ -152,6 +152,18 @@ const Contact = () => {
 
                 </div>
             </motion.div>
+            <style>{`
+                .name-mobile-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                }
+                @media (max-width: 768px) {
+                    .name-mobile-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };
