@@ -6,7 +6,7 @@ import Tilt from 'react-parallax-tilt';
 
 const Hero = () => {
     return (
-        <section style={{
+        <section id="home" style={{
             minHeight: '100vh',
             display: 'flex',
             alignItems: 'center',

@@ -136,25 +136,39 @@ const Navbar = ({ theme, toggleTheme }) => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
                         style={{
+                            position: 'absolute',
+                            top: '100%',
+                            left: 0,
+                            width: '100%',
                             overflow: 'hidden',
                             background: 'var(--glass-bg)',
-                            borderBottom: '1px solid var(--glass-border)'
+                            borderBottom: '1px solid var(--glass-border)',
+                            zIndex: 999,
+                            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
                         }}
                     >
                         <ul style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
                             {links.map((link) => (
                                 <li key={link.name}>
                                     <a
-                                        onClick={() => scrollToSection(link.id)}
+                                        href={`#${link.id}`}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            scrollToSection(link.id);
+                                        }}
                                         style={{
                                             fontSize: '1.2rem',
                                             color: activeLink === link.name ? 'var(--accent-color)' : 'var(--text-color)',
                                             textDecoration: 'none',
-                                            cursor: 'pointer'
+                                            cursor: 'pointer',
+                                            display: 'block',
+                                            width: '100%',
+                                            textAlign: 'center'
                                         }}
                                     >
                                         {link.name}
