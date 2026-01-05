@@ -75,8 +75,11 @@ const Projects = () => {
                                     </div>
 
                                     <div style={{ display: 'flex', gap: '1rem', marginTop: 'auto' }}>
-                                        <a href="#" style={{ fontSize: '1.3rem', color: 'var(--text-color)' }}><FaGithub /></a>
-                                        <a href="#" style={{ fontSize: '1.3rem', color: 'var(--text-color)' }}><FaExternalLinkAlt /></a>
+                                        {project.github && (
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.3rem', color: 'var(--text-color)' }}>
+                                                <FaGithub />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
