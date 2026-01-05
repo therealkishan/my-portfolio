@@ -12,7 +12,8 @@ const Projects = () => {
             title: 'Bank CRUD Application',
             desc: 'A Spring Boot application for managing bank accounts with full Create, Read, Update, Delete functionality. Implemented secure REST APIs to handle customer data.',
             tech: ['Java', 'Spring Boot', 'MySQL', 'Hibernate', 'REST API'],
-            img: bankingImg
+            img: bankingImg,
+            github: 'https://github.com/therealkishan/bank-repository-app'
         },
         {
             title: 'Core Banking Modules',

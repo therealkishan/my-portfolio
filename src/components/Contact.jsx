@@ -19,7 +19,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const mailtoLink = `mailto:kishan.backend@gamil.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\n\nMessage:\n${formData.message}`)}`;
+        const mailtoLink = `mailto:kishan.backend@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\n\nMessage:\n${formData.message}`)}`;
         window.location.href = mailtoLink;
     };
 
@@ -89,8 +89,8 @@ const Contact = () => {
                                 <div>
                                     <p style={{ fontWeight: 'bold' }}>Email</p>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        <p style={{ color: 'var(--text-secondary)' }}>kishan.backend@gamil.com</p>
-                                        <CopyButton text="kishan.backend@gamil.com" field="email" />
+                                        <p style={{ color: 'var(--text-secondary)' }}>kishan.backend@gmail.com</p>
+                                        <CopyButton text="kishan.backend@gmail.com" field="email" />
                                     </div>
                                 </div>
                             </div>
